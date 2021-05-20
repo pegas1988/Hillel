@@ -1,8 +1,8 @@
-public class neededMethodClass {
+ class neededMethodClass {
 
-    static String theString = "(1)";
+    private static String theString = "(1)";
 
-    public static String theMethod() {
+    private static String theMethod() {
         for (int i = 2; i <= 30; i++) {
             theString = theString + "(" + i + ")";
         }
