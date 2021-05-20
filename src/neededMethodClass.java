@@ -9,5 +9,4 @@
         return theString;
     }
 }
-// new string
- // change the name
+//new name
