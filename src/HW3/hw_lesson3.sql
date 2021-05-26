@@ -13,6 +13,7 @@ where color = 'black'
 group by car_brand
 having sum(price) < 15000;
 
+--Third part
 select order_number, client_name, "Order".car_brand, price
 from "Order"
          left join "car" on "Order".car_brand = car.car_brand;
