@@ -1,6 +1,6 @@
 package HW2;
 
-public class SentenceWthoutWord implements StringWorker{
+public class SentenceWthoutWord implements StringWorker {
 
     @Override
     public int execute(String sentence, String word) {
