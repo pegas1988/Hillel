@@ -1,3 +1,5 @@
+package HW1;
+
 public class TaskTwo {
     public static void main(String[] args) {
         int array[] = new int[10];

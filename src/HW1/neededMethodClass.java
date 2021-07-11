@@ -1,4 +1,6 @@
- class neededMethodClass {
+package HW1;
+
+class neededMethodClass {
 
     private static String theString = "(1)";
 
