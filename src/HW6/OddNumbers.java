@@ -4,30 +4,76 @@ public class OddNumbers {
     public static int[][] oddNumberArrayCreation(int size) {
         int[][] array = new int[size][size];
         int number = 1;
-        int moveString = 0;
-        int firstNumber = size / 2;
-        int moveColumn = 0;
-        for (int i = 0; i < 3; i += moveString) {
-            for (int j = firstNumber; j < 3; j += moveColumn) {
-                if (array[i][j] == 0) {
-                    array[i][j] = number;
-                    number++;
-                    if (i >= 1)
-                        moveString = -1;
-                    else
-                        moveString = size - 1;
-                    if (j < (size -1))
-                        moveColumn = moveColumn + 1;
-                    else
-                        moveColumn = moveColumn - (size - 1);
-                } else {
-                    array[i + 1][j] = number;
-                    number++;
+        int strings = 0;
+        int columns = size / 2;
+        while (true) {
+            if (array[strings][columns] == 0) {
+                array[strings][columns] = number;
+//                System.out.println(strings + " " + columns);
+//                System.out.println(array[strings][columns]);
+                number++;
+                if (number == size*size + 1) {
+                    break;
                 }
-                System.out.println( i + " " + j + " - " + array[i][j]);
-            }
-        }
+                strings = strings - 1;
+                if (strings < 0) {
+                    strings = size - 1;
+                    columns++;
+                    if (columns <= size - 1)
+                        columns = columns;
+                    else
+                        columns = 0;
+                } else {
+                    strings = strings;
+                    columns++;
+                    if (columns <= size - 1)
+                        columns = columns;
+                    else
+                        columns = 0;
+                }
 
-        return null;
+            } else {
+                if (strings == size - 1) {
+                    //strings = 0;
+                    strings = 1;
+                    columns = size - 1;
+                    //columns = columns;
+                }
+                else if (columns == 0 && strings == 0) {
+                    strings = strings + 2;
+                    columns = size - 1;
+                }
+                else {
+                    strings = strings + 2;
+                    columns = columns - 1;
+                }
+                array[strings][columns] = number;
+//                System.out.println(strings + " " + columns);
+//                System.out.println(array[strings][columns]);
+                number++;
+                if (number == size*size + 1) {
+                    break;
+                }
+                strings = strings - 1;
+                if (strings < 0) {
+                    strings = size - 1;
+                    columns++;
+                    if (columns <= size - 1)
+                        columns = columns;
+                    else
+                        columns = 0;
+                } else {
+                    strings = strings;
+                    columns++;
+                    if (columns <= size - 1)
+                        columns = columns;
+                    else
+                        columns = 0;
+                }
+
+            }
+
+        }
+        return array;
     }
 }

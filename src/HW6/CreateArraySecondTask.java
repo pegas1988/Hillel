@@ -43,21 +43,12 @@ public class CreateArraySecondTask {
         return greatM;
     }
 
-    public static void showArray(int[][] array) {
-        if (number == 3) {
-            for (int i = 0; i < 3; i++) {
-                for (int e = 0; e < 3; e++) {
-                    System.out.print(array[i][e] + " ");
-                }
-                System.out.println();
+    public static void showArray(int[][] array, int size) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(array[i][j] + " ");
             }
-        } else if (number == 4) {
-            for (int i = 0; i < 4; i++) {
-                for (int e = 0; e < 4; e++) {
-                    System.out.print(array[i][e] + " ");
-                }
-                System.out.println();
-            }
+            System.out.println();
         }
     }
 }
