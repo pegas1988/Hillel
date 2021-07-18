@@ -1,6 +1,6 @@
 package HW9.fillings;
 
-public enum fillings {
+public enum Fillers {
     CHOCOLATE,
     ROME,
     JIN,

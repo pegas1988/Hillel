@@ -2,14 +2,14 @@ package HW9.makers;
 
 import HW9.CreamsDecorator;
 import HW9.IceCream;
-import HW9.fillings.fillings;
+import HW9.fillings.Fillers;
 import HW9.shops.Shop;
 
-public class IceCreamMakerMatilda implements Shop {
+public class IceCreamMakerMatilda extends TheGodOfIceCreamMakers{
     private CreamsDecorator creamsDecorator;
-    private fillings sweats;
+    private Fillers sweats;
 
-    public IceCreamMakerMatilda(CreamsDecorator creamsDecorator, fillings someSweat) {
+    public IceCreamMakerMatilda(CreamsDecorator creamsDecorator, Fillers someSweat) {
         this.creamsDecorator = creamsDecorator;
         this.sweats = someSweat;
     }
