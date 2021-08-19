@@ -1,6 +1,7 @@
 package HW30;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 class TreeGatheringClass {
     private ArrayList list = new ArrayList();
@@ -13,7 +14,7 @@ class TreeGatheringClass {
             gatherNums(myTree.leftWing);
             gatherNums(myTree.rightWing);
         }
-        return list;
+        return (ArrayList) list.stream().sorted().collect(Collectors.toList());
     }
 
     private boolean isLeaf(MyTree myTree) {
