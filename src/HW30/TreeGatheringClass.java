@@ -2,10 +2,10 @@ package HW30;
 
 import java.util.ArrayList;
 
-public class TreeGatheringClass {
-    ArrayList list = new ArrayList();
+class TreeGatheringClass {
+    private ArrayList list = new ArrayList();
 
-    public ArrayList gatherNums(MyTree myTree) {
+    ArrayList gatherNums(MyTree myTree) {
         if (isLeaf(myTree))
             list.add(myTree.getA());
         else {
@@ -16,10 +16,7 @@ public class TreeGatheringClass {
         return list;
     }
 
-    public boolean isLeaf(MyTree myTree) {
-        if (myTree.getLeftWing() == null && myTree.getRightWing() == null)
-            return true;
-        else
-            return false;
+    private boolean isLeaf(MyTree myTree) {
+        return myTree.getLeftWing() == null && myTree.getRightWing() == null;
     }
 }

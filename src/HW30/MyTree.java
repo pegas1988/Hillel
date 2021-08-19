@@ -3,37 +3,30 @@ package HW30;
 class MyTree {
     private int a;
 
-    public MyTree leftWing;
-    public MyTree rightWing;
+    MyTree leftWing;
+    MyTree rightWing;
 
-    public MyTree(int a) {
+    MyTree(int a) {
         this.a = a;
     }
 
-    public int getA() {
+    int getA() {
         return a;
     }
 
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public MyTree getLeftWing() {
+    MyTree getLeftWing() {
         return leftWing;
     }
 
-    public void setLeftWing(MyTree leftWing) {
+    void setLeftWing(MyTree leftWing) {
         this.leftWing = leftWing;
     }
 
-    public MyTree getRightWing() {
+    MyTree getRightWing() {
         return rightWing;
     }
 
-    public void setRightWing(MyTree rightWing) {
+    void setRightWing(MyTree rightWing) {
         this.rightWing = rightWing;
-    }
-
-    public MyTree() {
     }
 }
