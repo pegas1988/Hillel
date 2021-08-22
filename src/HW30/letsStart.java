@@ -4,11 +4,9 @@ public class letsStart {
     public static void main(String[] args) {
         MyTree myTree = new MyTree(1);
 
-        TreeGrowingClass treeGrowingClass = new TreeGrowingClass();
-        treeGrowingClass.createTree(myTree, 1);
+        TreeGrowingQueue treeGrowingQueue = new TreeGrowingQueue();
 
-        TreeGatheringClass treeGatheringClass = new TreeGatheringClass();
-        System.out.println(treeGatheringClass.gatherNums(myTree));
+        TreeGatheringQueue treeGatheringQueue = new TreeGatheringQueue();
+        System.out.println(treeGatheringQueue.gatherValues(treeGrowingQueue.createTree(myTree, 31), 31));
     }
-
 }
