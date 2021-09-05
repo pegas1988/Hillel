@@ -2,7 +2,9 @@ package Test;
 
 @FunctionalInterface
 public interface Some<T> {
+    int interfaceVariable = 5;
     default void fromInterface() {
+        System.out.println(interfaceVariable);
         System.out.println("I am default method from interface");
     }
 
