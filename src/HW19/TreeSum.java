@@ -11,12 +11,12 @@ public class TreeSum {
             return 0;
         }
         if (node.right == null && node.left == null) {
-            letter = letter << 1;
+            letter = letter * 2;
             return letter + node.val;
         }
 
         int total = 0;
-        letter = letter << 1;
+        letter = letter * 2;
         letter += node.val;
         total += totalSum(node.right, letter) + totalSum(node.left, letter);
         return total;
