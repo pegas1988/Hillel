@@ -1,7 +1,6 @@
 package HW30;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 class TreeGrowingQueue {
     MyTree createTree(MyTree myTree, int a) {
