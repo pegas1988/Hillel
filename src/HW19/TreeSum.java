@@ -3,6 +3,8 @@ package HW19;
 public class TreeSum {
 
     public int sumRootToLeaf(TreeNode root) {
+        if(root.left == null & root.right == null)
+            return root.val;
         return totalSum(root.right, root.val) + totalSum(root.left, root.val);
     }
 
